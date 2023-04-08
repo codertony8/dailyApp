@@ -8,6 +8,8 @@ import { TimeDatePicker, Modes } from "react-native-time-date-picker";
 import { useCallback, useEffect, useState } from "react";
 
 import { useIsFocused } from "@react-navigation/native";
+import { collection, doc, getDoc, getDocs, query, setDoc } from "firebase/firestore";
+import { db } from "../firebase";
 
 
 const Employee = ({ navigation, route }) => {
@@ -34,9 +36,26 @@ const Employee = ({ navigation, route }) => {
         setDays(dataJson)
     }
 
+
+    // const setDaysToFirestore = async () => {
+    //     const whose= `${employee.name}`
+    //     await setDoc(doc(db, "timeline", whose), days)
+    //     console.log(whose,days,"DONE")
+    // }
+
+    // const getDaysFromFirestore = async () => {
+    //     const whose= `${employee.name}`
+    //     const docRef = doc(db, "timeline", whose);
+    //     const docSnap = await getDoc(docRef);
+    //     let data = docSnap.data()
+    //     setDays(data)
+    //     console.log("DONE")
+    // }
+
     useEffect(() => {
         if (isFocused) {
             getDayData()
+            // getDaysFromFirestore()
         }
     }, [isFocused])
 
