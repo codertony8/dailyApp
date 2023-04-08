@@ -10,7 +10,7 @@ import { timeline } from '../constants';
 
 const month = ["January","February","March","April","May","June","July","August","September","October","November","December"]
 export default Day = ({navigation,route}) => {
-    const [attendance, setAttendance] = useState("Present")
+    const [attendance, setAttendance] = useState("present")
     const [date,setDate]=useState("")
     const [storage,setStorage] =useState([])
     const day = route.params.day
@@ -21,7 +21,7 @@ export default Day = ({navigation,route}) => {
     },[day])
 
     const getDayBgColor = () => {
-        return attendance == "Present" ? timeline.present : timeline.absent
+        return attendance == "present" ? timeline.present : timeline.absent
     }
 
     const handleSaveDay =() =>{
