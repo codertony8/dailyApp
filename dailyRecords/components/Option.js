@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         backgroundColor: palette.primary,
         borderRadius: design.borderRadius,
         position: "absolute",
-        top: 70,
+        top: 1,
         right: 50,
         borderWidth: 1.5,
         borderColor: palette.borderColor,

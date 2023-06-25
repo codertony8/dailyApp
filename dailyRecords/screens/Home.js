@@ -64,6 +64,7 @@ const Home = ({ navigation }) => {
                 {/* details */}
                 <View style={{ flex: 1 }}>
                     {/* name */}
+                    {/* user name should be dynamic  */}
                     <Text style={styles.userName}>
                         Nimbaram Suthar
                     </Text >
